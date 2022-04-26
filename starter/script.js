@@ -12,7 +12,6 @@ document.querySelector('.score').textContent = 10;
 document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
 */
-
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
@@ -82,7 +81,6 @@ document.querySelector('.check').addEventListener('click', function () {
     //     document.querySelector('.score').textContent = 0;
     //   }
   }
-
   document.querySelector('.again').addEventListener('click', function () {
     score = 20;
     secretNumber = secretNumber = Math.trunc(Math.random() * 20) + 1;
