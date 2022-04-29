@@ -12,6 +12,7 @@ document.querySelector('.score').textContent = 10;
 document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
 */
+
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
@@ -29,7 +30,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // document.querySelector('.message').textContent = 'No number!';
     displayMessage('No number!');
 
-    //When play wins
+    //When player wins
   } else if (guess === secretNumber) {
     // document.querySelector('.message').textContent = 'Correct number!';
     displayMessage('Correct number!');
@@ -43,7 +44,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.highscore').textContent = highscore;
     }
 
-    //WHen guess is wrong
+    //When guess is wrong
   } else if (guess !== secretNumber) {
     if (score > 1) {
       // document.querySelector('.message').textContent =
@@ -57,7 +58,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
 
-    // The code above and below contained repetitive code which I simplified by putting the message display into a fuction called "displayMessage" as seen above ^ and below
+    // The code above and below contained repetitive code which I simplified by putting the message display into a function called "displayMessage" as seen above ^ and below
 
     //This is when guess is too high
     // } else if (guess > secretNumber) {
